@@ -1,0 +1,53 @@
+[33mcommit 99a38e84d3d31a0311cb2ee42ee0d20a60abf08d[m
+Author: jimmy <807065717@qq.com>
+Date:   Fri Jan 13 06:13:46 2017 +0800
+
+    the led asm code is ok
+
+[33mcommit e3c54c24edd4d4f32323b64a970d172bec00ecb4[m
+Author: jimmy <807065717@qq.com>
+Date:   Mon Jan 9 07:02:05 2017 +0800
+
+    add led asm code
+
+[33mcommit ef4188dbf33cdce3516917645b464e9a92c5185a[m
+Author: jimmy <807065717@qq.com>
+Date:   Sun Jan 8 09:06:36 2017 +0800
+
+    edit sd_fuse completely
+
+[33mcommit aeef74a0bfbe1f6dce8b2392f093b40aa8fcfc58[m
+Author: jimmy <807065717@qq.com>
+Date:   Sat Jan 7 18:25:32 2017 +0800
+
+    add sd_fuse tool
+
+[33mcommit 6f4e43e1f420e12cbfbd495ab61b47bd638a144d[m
+Author: jimmy <807065717@qq.com>
+Date:   Sat Jan 7 18:23:14 2017 +0800
+
+    OK, added the tiny4412 board configuration completly and this version can be built successfully
+
+[33mcommit fea0fc09e16f9a39ea10ef721030d3802cfa1250[m
+Author: jimmy <807065717@qq.com>
+Date:   Sat Jan 7 18:12:12 2017 +0800
+
+    add board tiny4412 complete
+
+[33mcommit 131bbd922d6422fdc806c13975e434ad483f910e[m
+Author: jimmy <807065717@qq.com>
+Date:   Sat Jan 7 17:46:53 2017 +0800
+
+    add tiny4412 board
+
+[33mcommit 70da327fc32da3b2ed9140e6f60f679302e46a2d[m
+Author: jimmy <807065717@qq.com>
+Date:   Sat Jan 7 15:17:03 2017 +0800
+
+    original code
+
+[33mcommit 38230936bc1c8669807eef55313f645686e85060[m
+Author: admin <admin@gitblit>
+Date:   Sat Jan 7 15:09:39 2017 +0800
+
+    Initial commit
