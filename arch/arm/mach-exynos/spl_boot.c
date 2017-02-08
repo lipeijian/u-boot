@@ -222,8 +222,13 @@ void copy_uboot_to_ram(void)
 		break;
 #endif
 	case BOOT_MODE_SD:
+	/*
 		offset = BL2_START_OFFSET;
 		size = BL2_SIZE_BLOC_COUNT;
+		copy_bl2 = get_irom_func(MMC_INDEX);
+	*/
+		offset = UBOOT_START_OFFSET;
+		size = UBOOT_SIZE_BLOC_COUNT;
 		copy_bl2 = get_irom_func(MMC_INDEX);
 		break;
 #ifdef CONFIG_SUPPORT_EMMC_BOOT
@@ -253,9 +258,32 @@ void copy_uboot_to_ram(void)
 	default:
 		break;
 	}
-
+#ifdef	CONFIG_TINY4412
 	if (copy_bl2)
+	{
+		unsigned int i , count = 0;
+		unsigned char *buffer = (unsigned char *)0x02050000;
+		unsigned char *dst = (unsigned char *)CONFIG_SYS_TEXT_BASE;
+		unsigned int step = (0x10000 / 512);
+
+		for (count = 0; count < UBOOT_SIZE_BLOC_COUNT; count += step)
+		{
+			copy_bl2((u32)(UBOOT_START_OFFSET+count), (u32)step, (u32)buffer);
+
+			for (i = 0; i < 0x10000; i++)
+			{
+				*dst++ = buffer[i];
+			}
+		}
+		printascii("copy_uboot_to_ram done! \n");
+	}
+#else
+	if (copy_bl2) {
+		printascii("Go to copy_bl2().\n");
 		copy_bl2(offset, size, CONFIG_SYS_TEXT_BASE);
+		printascii("copy_bl2 finish! \n");
+	}
+#endif
 }
 
 void memzero(void *s, size_t n)
