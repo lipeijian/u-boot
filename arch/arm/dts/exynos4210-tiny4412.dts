@@ -49,4 +49,14 @@
 	sdhci@12540000 {
 		status = "disabled";
 	};
+
+	dwmmc@12550000 {
+		samsung,bus-width = <8>;
+		samsung,timing = <2 1 0>;
+		samsung,removable = <0>;
+		fifoth_val = <0x203f0040>;
+		bus_hz = <400000000>;
+		div = <0x3>;
+		index = <4>;
+	};
 };
