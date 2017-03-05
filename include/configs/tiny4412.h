@@ -31,11 +31,11 @@
 
 #define CONFIG_SYS_DCACHE_OFF		1
 
-/* ORIGEN has 4 bank of DRAM */
-#define CONFIG_NR_DRAM_BANKS		4
+/* TINY4412-1412 core board has 8 bank of DRAM */
+#define CONFIG_NR_DRAM_BANKS		8
 #define CONFIG_SYS_SDRAM_BASE		0x40000000
 #define PHYS_SDRAM_1			CONFIG_SYS_SDRAM_BASE
-#define SDRAM_BANK_SIZE			(256 << 20)	/* 256 MB */
+#define SDRAM_BANK_SIZE			(128 << 20)	/* 128 MB */
 
 /* memtest works on */
 #define CONFIG_SYS_MEMTEST_START	CONFIG_SYS_SDRAM_BASE
@@ -103,10 +103,10 @@
 	"fi;" \
 	"load mmc ${mmcdev} ${loadaddr} uImage; bootm ${loadaddr} "
 
-#define CONFIG_CLK_1000_400_200
+/* //#define CONFIG_CLK_1000_400_200 */
 
 /* MIU (Memory Interleaving Unit) */
-#define CONFIG_MIU_2BIT_21_7_INTERLEAVED
+/* //#define CONFIG_MIU_2BIT_21_7_INTERLEAVED */
 
 #define CONFIG_ENV_IS_IN_MMC
 #define CONFIG_SYS_MMC_ENV_DEV		0
